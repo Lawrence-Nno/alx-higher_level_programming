@@ -3,4 +3,4 @@ for i in range(0, 100):
     if i == 99:
         print('{0}{1}'.format((i//10), (i % 10)))
     else:
-        print('{0}{1}, '.format((i//10), (i % 10)),end="")
+        print('{0}{1}, '.format((i//10), (i % 10)), end="")
