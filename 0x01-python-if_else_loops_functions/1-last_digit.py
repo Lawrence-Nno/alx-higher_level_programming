@@ -5,7 +5,7 @@ o = number
 if number < 0:
     number = -1 * number
     a = number % 10
-    print("Last digit of " + str(o) + " is -" + str(a) + " and is less than 6 and not 0")
+    print(f"Last digit of {str(o)} is -{str(a)} and is less than 6 and not 0")
 elif number >= 0:
     a = number % 10
     if a > 5:
