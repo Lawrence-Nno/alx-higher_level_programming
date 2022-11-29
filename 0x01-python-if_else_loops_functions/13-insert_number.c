@@ -39,7 +39,7 @@ listint_t *insert_node(listint_t **head, int number)
 		{
 			break;
 		}
-		else if (hold->next->n == NULL)
+		else if (hold->next->n == 0)
 			break;
 	}
 	insrt->next = hold->next;
