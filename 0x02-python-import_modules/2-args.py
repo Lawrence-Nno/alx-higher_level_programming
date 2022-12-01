@@ -7,7 +7,7 @@ if __name__ == "__main__":
     if argv_count == 0:
         print("{0} arguments.".format(argv_count))
     elif argv_count == 1:
-        print("{0} argument.".format(argv_count))
+        print("{0} argument:".format(argv_count))
         print("{0}: {1}".format(index, sys.argv[1]))
     else:
         print("{0} arguments:".format(argv_count))
