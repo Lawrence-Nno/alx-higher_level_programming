@@ -75,6 +75,10 @@ class Rectangle(Base):
 
     def display(self):
         """This func prints the triangle in the stdout using #"""
+        if self.__width == 0 or self.__height == 0:
+            print("")
+            return
+
         print('\n' * self.__y, end="")
         for i in range(self.__height):
             print(' ' * self.__x + '#' * self.__width)
@@ -118,4 +122,8 @@ class Rectangle(Base):
                     self.x = value
                 elif key == 'y':
                     self.y = value
+
+    def to_dictionary(self):
+        """This method returns the dictionary representation of the class"""
+        return {"id": self.id, "width": self.width, "height": self.height, "x": self.x, "y": self.y}
 
