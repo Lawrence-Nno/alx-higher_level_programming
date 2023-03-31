@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-This script lists 10 commits (from the most recent to the oldest) of 
-the repository and user sent in as arguments
+This script lists 10 commits (from the most recent to the oldest)
+of the repository and user sent in as arguments
 """
 if __name__ == '__main__':
     import requests
