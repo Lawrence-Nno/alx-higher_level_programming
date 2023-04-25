@@ -1,15 +1,14 @@
-#!/usr/bin/mode
+#!/usr/bin/node
+
 const request = require('request');
-const url = 'https://swapi-api.alx-tools.com/api/films/' + process.argv[2];
-request(url, function (err, response, body) {
-if (!err) {
+const starWarsUri = 'https://swapi-api.hbtn.io/api/films/'.concat(process.argv[2]);
+
+request(starWarsUri, function (_err, _res, body) {
   const characters = JSON.parse(body).characters;
-  characters.forEach((character) => {
-    request(character, function (err, response, body) {
-      if (!err) {
-        console.log(JSON.parse(body).name);
-       }
-     });
-   });
+
+  for (let i = 0; i < characters.length; ++i) {
+    request(characters[i], function (_cErr, _cRes, cBody) {
+      console.log(JSON.parse(cBody).name);
+    });
   }
 });
